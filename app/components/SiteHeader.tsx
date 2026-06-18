@@ -102,6 +102,7 @@ export default function SiteHeader({ active }: { active: NavLabel }) {
           target="_blank"
           rel="noopener noreferrer"
           className="btn-gold"
+          aria-label="Hubungi WhatsApp"
           style={{
             display: "inline-flex",
             alignItems: "center",
@@ -231,6 +232,7 @@ export function IconMask({
   size?: number;
   color?: string;
 }) {
+  const url = `url(https://unpkg.com/lucide-static@latest/icons/${icon}.svg)`;
   return (
     <span
       style={{
@@ -239,8 +241,14 @@ export function IconMask({
         height: size,
         flexShrink: 0,
         background: color,
-        WebkitMask: `url(https://unpkg.com/lucide-static@latest/icons/${icon}.svg) center/contain no-repeat`,
-        mask: `url(https://unpkg.com/lucide-static@latest/icons/${icon}.svg) center/contain no-repeat`,
+        WebkitMaskImage: url,
+        WebkitMaskSize: "contain",
+        WebkitMaskRepeat: "no-repeat",
+        WebkitMaskPosition: "center",
+        maskImage: url,
+        maskSize: "contain",
+        maskRepeat: "no-repeat",
+        maskPosition: "center",
       }}
     />
   );

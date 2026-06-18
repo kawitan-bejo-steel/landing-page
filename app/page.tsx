@@ -149,6 +149,8 @@ export default function BerandaPage() {
           alt="Background"
           width={900}
           height={600}
+          sizes="100vw"
+          priority
           aria-hidden
         />
 

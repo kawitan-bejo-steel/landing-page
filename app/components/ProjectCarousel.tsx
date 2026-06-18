@@ -33,7 +33,8 @@ export default function ProjectCarousel() {
           src={slide.src}
           alt={slide.alt}
           width={1000}
-          height={1000}
+          height={600}
+          sizes="(max-width: 768px) 100vw, 50vw"
           style={{
             position: "absolute",
             inset: "14px",
@@ -47,6 +48,7 @@ export default function ProjectCarousel() {
             zIndex: i === current ? 1 : 0,
           }}
           priority={i === 0}
+          loading={i === 0 ? undefined : "lazy"}
         />
       ))}
 
