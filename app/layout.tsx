@@ -5,8 +5,10 @@ import {
   Barlow_Semi_Condensed,
   JetBrains_Mono,
 } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
-import { BASE_URL } from "./lib/site";
+import { BASE_URL, GA_ID } from "./lib/site";
+import AnalyticsTracker from "./components/AnalyticsTracker";
 
 const oxanium = Oxanium({
   subsets: ["latin"],
@@ -141,6 +143,19 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         {children}
+        <AnalyticsTracker />
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=${GA_ID}`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${GA_ID}');
+          `}
+        </Script>
       </body>
     </html>
   );
