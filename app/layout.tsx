@@ -91,11 +91,16 @@ const jsonLd = {
   "@type": "LocalBusiness",
   name: "Kawitan Bejo Steel",
   description:
-    "Distributor besi baru dan bekas. Melayani pembelian eceran hingga pengadaan proyek skala besar dari seluruh Indonesia.",
+    "Distributor besi baru dan bekas berpengalaman sejak 2018. Melayani pembelian eceran langsung di gudang maupun pengadaan proyek skala besar. Mampu menangani ribuan ton per proyek. Telah mengerjakan project di Yogyakarta, Jabodetabek, Surabaya, Semarang, Morowali, dan kota lainnya di seluruh Indonesia.",
   url: BASE_URL,
   telephone: "+6287738585311",
   email: "kawitanbejo@gmail.com",
   image: `${BASE_URL}/logo-full.png`,
+  foundingDate: "2018",
+  founder: {
+    "@type": "Person",
+    name: "Suryana",
+  },
   address: {
     "@type": "PostalAddress",
     streetAddress: "RT 16/07 Dalangan, Tempelrejo, Triharjo",
@@ -109,6 +114,15 @@ const jsonLd = {
     latitude: -7.87658056094402,
     longitude: 110.12467726991245,
   },
+  areaServed: [
+    { "@type": "City", name: "Wates" },
+    { "@type": "State", name: "Daerah Istimewa Yogyakarta" },
+    { "@type": "City", name: "Jakarta" },
+    { "@type": "City", name: "Surabaya" },
+    { "@type": "City", name: "Semarang" },
+    { "@type": "City", name: "Morowali" },
+    { "@type": "Country", name: "Indonesia" },
+  ],
   hasMap: "https://maps.app.goo.gl/d6oNNp4LFEfi6qp98",
   sameAs: ["https://wa.me/6287738585311"],
   priceRange: "Rp 10.000 - 200.000",

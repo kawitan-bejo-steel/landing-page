@@ -4,7 +4,7 @@ import SiteFooter from "../components/SiteFooter";
 import Reveal from "../components/Reveal";
 
 export const metadata: Metadata = {
-  title: "Kontak — Kawitan Bejo Steel",
+  title: "Hubungi Kami",
   description:
     "Hubungi Kawitan Bejo Steel untuk pembelian besi, penjualan besi bekas, atau konsultasi kebutuhan proyek.",
   openGraph: {

@@ -5,9 +5,9 @@ import SiteFooter from "../components/SiteFooter";
 import Reveal from "../components/Reveal";
 
 export const metadata: Metadata = {
-  title: "Produk — Kawitan Bejo Steel",
+  title: "Katalog Produk Besi",
   description:
-    "Katalog besi baru dan bekas: Hollow, Pipa, Siku, Beton, Galvanis, Baja Ringan, IWF, Plat Strip, dan lainnya.",
+    "Katalog besi baru dan bekas Kawitan Bejo Steel: Hollow, Pipa, Siku, Beton, Galvanis, Baja Ringan, IWF, Plat Strip, dan lainnya. Tersedia eceran hingga partai besar.",
   openGraph: {
     title: "Katalog Produk Besi — Kawitan Bejo Steel",
     description: "Tersedia besi baru dan bekas dalam berbagai profil: hollow, pipa, siku, IWF, H beam, baja ringan, plat strip, dan lainnya. Beli satuan maupun partai besar.",
@@ -243,9 +243,24 @@ function ProductCard({
   );
 }
 
+const itemListJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  name: "Katalog Produk Besi Kawitan Bejo Steel",
+  description: "Daftar produk besi baru dan bekas yang tersedia di Kawitan Bejo Steel, Wates, Kulon Progo.",
+  numberOfItems: PRODUCTS.length,
+  itemListElement: PRODUCTS.map((p, i) => ({
+    "@type": "ListItem",
+    position: i + 1,
+    name: p.name,
+    description: p.desc,
+  })),
+};
+
 export default function ProdukPage() {
   return (
     <div style={{ background: "var(--surface-base)", minHeight: "100vh" }}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }} />
       <SiteHeader active="Produk" />
 
       {/* Hero */}

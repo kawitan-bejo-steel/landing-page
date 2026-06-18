@@ -6,9 +6,9 @@ import SiteFooter from "../components/SiteFooter";
 import Reveal from "../components/Reveal";
 
 export const metadata: Metadata = {
-  title: "Tentang Kami — Kawitan Bejo Steel",
+  title: "Tentang Kami",
   description:
-    "Kawitan Bejo Steel — mitra pengadaan material besi untuk konstruksi dan industri. Melayani klien dari seluruh Indonesia dengan stok lengkap dan kapasitas volume besar.",
+    "Kawitan Bejo Steel, didirikan Suryana sejak 2018. Toko sekaligus distributor besi di Wates, Kulon Progo — melayani pembelian eceran hingga proyek bongkaran skala besar dari seluruh Indonesia.",
   openGraph: {
     title: "Tentang Kawitan Bejo Steel",
     description: "Toko sekaligus distributor besi di Kulon Progo. Melayani pembelian eceran hingga proyek skala besar, dengan pengalaman menangani bongkaran industri dari seluruh Indonesia.",
@@ -25,7 +25,7 @@ const BLOCKS = [
   {
     icon: "building-2",
     title: "Kapasitas Proyek Besar",
-    body: "Berpengalaman menangani pengadaan dan pembelian material bekas dari proyek bongkaran skala besar, termasuk koordinasi logistik lintas kota. Kami telah bekerja sama dengan kontraktor dan industri dari berbagai daerah di seluruh Indonesia.",
+    body: "Sejak 2018, kami berpengalaman menangani pengadaan dan pembelian material bekas dari proyek bongkaran skala besar — mampu menangani ribuan ton per proyek. Telah melayani kontraktor dan industri di Yogyakarta, Jabodetabek, Surabaya, Semarang, Morowali, dan siap menggarap project di seluruh Indonesia.",
   },
   {
     icon: "handshake",
@@ -93,11 +93,13 @@ export default function TentangPage() {
                 maxWidth: "560px",
               }}
             >
-              Kawitan Bejo Steel hadir sebagai toko sekaligus distributor
-              material besi — melayani pembelian satuan langsung di gudang
-              maupun pengadaan skala besar untuk proyek konstruksi dan industri.
-              Berbasis di Kulon Progo, D.I. Yogyakarta, dengan pengalaman
-              menangani proyek dari seluruh Indonesia.
+              Didirikan oleh Suryana sejak 2018, Kawitan Bejo Steel hadir
+              sebagai toko sekaligus distributor material besi — melayani
+              pembelian satuan langsung di gudang maupun pengadaan skala besar
+              untuk proyek konstruksi dan industri. Berbasis di Wates, Kulon
+              Progo, D.I. Yogyakarta, dengan pengalaman menangani project
+              bongkaran besi di Yogyakarta, Jabodetabek, Surabaya, Semarang,
+              Morowali, dan siap melayani kota lainnya di seluruh Indonesia.
             </p>
           </div>
           <div style={{ position: "relative" }}>

@@ -5,7 +5,7 @@ import SiteFooter from "../components/SiteFooter";
 import Reveal from "../components/Reveal";
 
 export const metadata: Metadata = {
-  title: "Galeri — Kawitan Bejo Steel",
+  title: "Galeri Gudang & Proyek",
   description: "Dokumentasi gudang, stok besi, dan proyek yang telah ditangani Kawitan Bejo Steel.",
   openGraph: {
     title: "Galeri Kawitan Bejo Steel",
@@ -26,9 +26,27 @@ const PHOTOS = [
   { src: "/assets/images/galeri/galeri_9.jpg", alt: "Area penyimpanan besi profil dan hollow Kawitan Bejo Steel" },
 ];
 
+const imageGalleryJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ImageGallery",
+  name: "Galeri Kawitan Bejo Steel",
+  description: "Dokumentasi gudang, stok besi, dan proyek yang telah ditangani Kawitan Bejo Steel di Wates, Kulon Progo.",
+  url: "https://kawitanbejosteel.shop/galeri",
+  image: [
+    { src: "/assets/images/galeri/depan.jpg", alt: "Tampak depan gudang Kawitan Bejo Steel di Wates, Kulon Progo" },
+    ...PHOTOS,
+  ].map(({ src, alt }) => ({
+    "@type": "ImageObject",
+    url: `https://kawitanbejosteel.shop${src}`,
+    name: alt,
+    description: alt,
+  })),
+};
+
 export default function GaleriPage() {
   return (
     <div style={{ background: "var(--surface-base)", minHeight: "100vh" }}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(imageGalleryJsonLd) }} />
       <SiteHeader active="Galeri" />
 
       {/* Hero */}

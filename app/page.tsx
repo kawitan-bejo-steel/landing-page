@@ -7,15 +7,42 @@ import Reveal from "./components/Reveal";
 import ProjectCarousel from "./components/ProjectCarousel";
 
 export const metadata: Metadata = {
-  title: "Kawitan Bejo Steel — Distributor Besi Baru & Bekas",
+  title: { absolute: "Kawitan Bejo Steel — Distributor Besi Baru & Bekas" },
   description:
-    "Kawitan Bejo Steel menyediakan besi baru dan bekas untuk berbagai kebutuhan, sekaligus menerima pembelian besi bekas dalam jumlah besar.",
+    "Kawitan Bejo Steel, distributor besi baru & bekas sejak 2018 di Wates, Kulon Progo. Melayani pembelian eceran hingga proyek skala besar. Siap kirim ke seluruh Indonesia.",
   openGraph: {
     title: "Kawitan Bejo Steel — Distributor Besi Baru & Bekas",
-    description: "Toko & distributor besi di Kulon Progo. Beli eceran langsung di gudang atau pesan partai besar. Terima besi bekas dari seluruh Indonesia.",
+    description: "Toko & distributor besi sejak 2018 di Kulon Progo. Beli eceran langsung di gudang atau pesan partai besar. Terima besi bekas dari seluruh Indonesia.",
     url: "/",
   },
 };
+
+const FAQS = [
+  {
+    q: "Apakah pembelian besi bisa diantar?",
+    a: "Kami melayani pengantaran sesuai kapasitas dan jarak. Hubungi kami via WhatsApp untuk konfirmasi ongkos kirim ke lokasi Anda.",
+  },
+  {
+    q: "Apakah bisa membeli besi dalam jumlah satuan atau kecil?",
+    a: "Ya. Gudang kami juga berfungsi sebagai toko — siapapun bisa datang langsung untuk membeli besi dalam jumlah kecil hingga sedang tanpa minimum order.",
+  },
+  {
+    q: "Apakah Kawitan Bejo Steel menerima penjualan besi bekas?",
+    a: "Ya, kami menerima segala jenis besi bekas dari perorangan, proyek konstruksi, maupun industri — termasuk hasil bongkaran gudang dan pabrik.",
+  },
+  {
+    q: "Apakah menerima pesanan besi untuk proyek dalam jumlah besar?",
+    a: "Ya, kami siap memasok besi berkualitas untuk kebutuhan skala kecil maupun besar. Sejak 2018 kami telah melayani kontraktor dan industri dari berbagai kota di seluruh Indonesia.",
+  },
+  {
+    q: "Apakah Kawitan Bejo Steel melayani project di luar Yogyakarta?",
+    a: "Ya. Kami berpengalaman menangani proyek bongkaran besi di Jabodetabek, Surabaya, Semarang, Morowali, dan siap menggarap project di kota lainnya.",
+  },
+  {
+    q: "Di mana lokasi gudang Kawitan Bejo Steel?",
+    a: "Gudang kami berlokasi di RT 16/07 Dalangan, Tempelrejo, Triharjo, Wates, Kulon Progo, D.I. Yogyakarta. Buka Senin–Sabtu pukul 08.00–16.00 WIB.",
+  },
+];
 
 const SCRAPS = [
   "Besi beton",
@@ -113,9 +140,61 @@ const REASONS = [
   },
 ];
 
+const howToJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  name: "Cara Menjual Besi Bekas ke Kawitan Bejo Steel",
+  description: "Proses penjualan besi bekas yang transparan dan mudah — dari kontak awal hingga pembayaran di tempat.",
+  step: [
+    { "@type": "HowToStep", position: 1, name: "Hubungi via WhatsApp", text: "Kirim info jenis dan perkiraan jumlah besi bekas Anda ke WhatsApp kami di 0877-3858-5311." },
+    { "@type": "HowToStep", position: 2, name: "Pengecekan barang", text: "Jadwalkan pengecekan di lokasi bila diperlukan untuk memastikan jenis dan kondisi besi." },
+    { "@type": "HowToStep", position: 3, name: "Penimbangan di lokasi", text: "Penimbangan dilakukan langsung di lokasi secara transparan dan akurat." },
+    { "@type": "HowToStep", position: 4, name: "Pembayaran di tempat", text: "Pembayaran diberikan langsung setelah proses penimbangan selesai." },
+  ],
+};
+
+const faqJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  mainEntity: [
+    {
+      "@type": "Question",
+      name: "Apakah pembelian besi bisa diantar?",
+      acceptedAnswer: { "@type": "Answer", text: "Ya, kami melayani pengantaran sesuai kapasitas dan jarak. Hubungi kami via WhatsApp untuk konfirmasi ongkos kirim ke lokasi Anda." },
+    },
+    {
+      "@type": "Question",
+      name: "Apakah Kawitan Bejo Steel menerima pesanan besi untuk pembangunan dalam jumlah besar?",
+      acceptedAnswer: { "@type": "Answer", text: "Ya, kami siap memasok besi berkualitas untuk kebutuhan skala kecil maupun besar, termasuk proyek konstruksi dan industri dari seluruh Indonesia." },
+    },
+    {
+      "@type": "Question",
+      name: "Apakah Kawitan Bejo Steel menerima penjualan besi tua atau besi bekas?",
+      acceptedAnswer: { "@type": "Answer", text: "Ya, kami menerima segala jenis besi bekas dari perorangan, proyek konstruksi, maupun industri — termasuk hasil bongkaran gudang dan pabrik." },
+    },
+    {
+      "@type": "Question",
+      name: "Apakah bisa membeli besi dalam jumlah satuan atau kecil?",
+      acceptedAnswer: { "@type": "Answer", text: "Ya. Gudang kami juga berfungsi sebagai toko — siapapun bisa datang langsung untuk membeli besi dalam jumlah kecil hingga sedang tanpa minimum order." },
+    },
+    {
+      "@type": "Question",
+      name: "Di mana lokasi gudang Kawitan Bejo Steel?",
+      acceptedAnswer: { "@type": "Answer", text: "Gudang kami berlokasi di RT 16/07 Dalangan, Tempelrejo, Triharjo, Wates, Kulon Progo, D.I. Yogyakarta 55651. Buka Senin–Sabtu pukul 08.00–16.00 WIB." },
+    },
+    {
+      "@type": "Question",
+      name: "Apakah Kawitan Bejo Steel melayani project di luar Yogyakarta?",
+      acceptedAnswer: { "@type": "Answer", text: "Ya. Kami berpengalaman menangani proyek bongkaran besi sejak 2018 di berbagai kota, termasuk Jabodetabek, Surabaya, Semarang, dan Morowali. Kami siap menggarap project di kota lainnya di seluruh Indonesia." },
+    },
+  ],
+};
+
 export default function BerandaPage() {
   return (
     <div style={{ background: "var(--surface-base)", minHeight: "100vh" }}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       <SiteHeader active="Beranda" />
 
       {/* ── Hero ─────────────────────────────────────────────────────── */}
@@ -696,9 +775,11 @@ export default function BerandaPage() {
                 maxWidth: "480px",
               }}
             >
-              Kawitan Bejo Steel berpengalaman dalam pekerjaan bongkar pabrik
-              dan proyek sejenis, termasuk penampungan besi bekas dalam volume
-              besar dan koordinasi logistik untuk kebutuhan industri.
+              Sejak 2018, Kawitan Bejo Steel berpengalaman dalam pekerjaan
+              bongkar pabrik dan proyek sejenis — mampu menangani ribuan ton
+              per proyek. Telah melayani project di Yogyakarta, Jabodetabek,
+              Surabaya, Semarang, Morowali, dan siap menggarap project di
+              kota lainnya di seluruh Indonesia.
             </p>
             <Link
               href="/tentang"
@@ -775,6 +856,56 @@ export default function BerandaPage() {
                   {r.body}
                 </p>
               </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── FAQ ──────────────────────────────────────────────────────── */}
+      <section className="bj-pad-section" style={{ background: "var(--surface-base)" }}>
+        <div className="bj-container" style={{ maxWidth: "860px" }}>
+          <div className="bj-eyebrow" style={{ marginBottom: "10px" }}>FAQ</div>
+          <h2 className="bj-h2" style={{ marginBottom: "40px" }}>
+            Pertanyaan yang Sering Ditanyakan
+          </h2>
+          <div>
+            {FAQS.map((item, i) => (
+              <Reveal key={item.q} delay={i * 50}>
+                <div
+                  style={{
+                    borderBottom: "1px solid var(--border-subtle)",
+                    padding: "24px 0",
+                  }}
+                >
+                  <h3
+                    style={{
+                      fontSize: "18px",
+                      fontFamily: "var(--font-display)",
+                      fontWeight: 700,
+                      color: "var(--text-strong)",
+                      lineHeight: 1.4,
+                      display: "flex",
+                      gap: "12px",
+                      alignItems: "flex-start",
+                    }}
+                  >
+                    <span style={{ color: "var(--gold-500)", flexShrink: 0 }}>Q</span>
+                    {item.q}
+                  </h3>
+                  <p
+                    style={{
+                      fontSize: "15px",
+                      color: "var(--text-muted)",
+                      lineHeight: 1.7,
+                      marginTop: "10px",
+                      paddingLeft: "30px",
+                      maxWidth: "720px",
+                    }}
+                  >
+                    {item.a}
+                  </p>
+                </div>
               </Reveal>
             ))}
           </div>

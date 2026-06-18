@@ -3,6 +3,67 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import {
+  AlignJustify,
+  ArrowRight,
+  Box,
+  Building2,
+  Circle,
+  CircleDashed,
+  Clock,
+  CreditCard,
+  Grip,
+  Handshake,
+  ImageIcon,
+  Info,
+  Layers,
+  Mail,
+  MapPin,
+  Menu,
+  MessageCircle,
+  Minus,
+  Navigation,
+  Phone,
+  Recycle,
+  Scale,
+  Square,
+  Store,
+  Triangle,
+  Truck,
+  X,
+  type LucideProps,
+} from "lucide-react";
+
+const ICON_MAP: Record<string, React.ComponentType<LucideProps>> = {
+  "align-justify": AlignJustify,
+  "arrow-right": ArrowRight,
+  "box": Box,
+  "building-2": Building2,
+  "circle": Circle,
+  "circle-dashed": CircleDashed,
+  "clock": Clock,
+  "credit-card": CreditCard,
+  "grip": Grip,
+  "handshake": Handshake,
+  "image": ImageIcon,
+  "info": Info,
+  "layers": Layers,
+  "mail": Mail,
+  "map-pin": MapPin,
+  "menu": Menu,
+  "message-circle": MessageCircle,
+  "minus": Minus,
+  "navigation": Navigation,
+  "phone": Phone,
+  "recycle": Recycle,
+  "scale": Scale,
+  "square": Square,
+  "store": Store,
+  "triangle": Triangle,
+  "triangle-right": ArrowRight,
+  "truck": Truck,
+  "x": X,
+};
 
 const NAV_ITEMS = [
   { label: "Beranda", href: "/" },
@@ -232,24 +293,15 @@ export function IconMask({
   size?: number;
   color?: string;
 }) {
-  const url = `url(https://unpkg.com/lucide-static@latest/icons/${icon}.svg)`;
+  const LucideIcon = ICON_MAP[icon];
+  if (!LucideIcon) return null;
   return (
-    <span
-      style={{
-        display: "inline-block",
-        width: size,
-        height: size,
-        flexShrink: 0,
-        background: color,
-        WebkitMaskImage: url,
-        WebkitMaskSize: "contain",
-        WebkitMaskRepeat: "no-repeat",
-        WebkitMaskPosition: "center",
-        maskImage: url,
-        maskSize: "contain",
-        maskRepeat: "no-repeat",
-        maskPosition: "center",
-      }}
+    <LucideIcon
+      width={size}
+      height={size}
+      color={color}
+      strokeWidth={2}
+      style={{ flexShrink: 0, display: "inline-block" }}
     />
   );
 }
