@@ -50,9 +50,9 @@ export default function SiteFooter() {
           <div>
             <div className="bj-eyebrow" style={{ marginBottom: "16px" }}>Layanan</div>
             <div style={{ display: "flex", flexDirection: "column", gap: "11px" }}>
-              <Link href="/#jual-besi-bekas" style={{ fontSize: "14px", color: "var(--text-body)", textDecoration: "none" }}>Beli Besi Bekas</Link>
-              <Link href="/tentang" style={{ fontSize: "14px", color: "var(--text-body)", textDecoration: "none" }}>Bongkar Pabrik</Link>
-              <Link href="/produk" style={{ fontSize: "14px", color: "var(--text-body)", textDecoration: "none" }}>Pembelian Partai Besar</Link>
+              <Link href="/jual-besi-bekas" style={{ fontSize: "14px", color: "var(--text-body)", textDecoration: "none" }}>Jual Besi Bekas</Link>
+              <Link href="/bongkar-pabrik" style={{ fontSize: "14px", color: "var(--text-body)", textDecoration: "none" }}>Bongkar Pabrik</Link>
+              <Link href="/borongan-besi-bekas" style={{ fontSize: "14px", color: "var(--text-body)", textDecoration: "none" }}>Borongan Besi Bekas</Link>
               <Link href="/galeri" style={{ fontSize: "14px", color: "var(--text-body)", textDecoration: "none" }}>Galeri Proyek</Link>
             </div>
           </div>
